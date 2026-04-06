@@ -6,6 +6,7 @@ struct ContentView: View {
     @State private var rightText = ""
     @State private var diffResult: DiffResult?
     @State private var showingDiff = false
+    @State private var showingAlert = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -22,6 +23,9 @@ struct ContentView: View {
             } else {
                 inputView
             }
+        }
+        .alert("テキストファイルのみ対応しています", isPresented: $showingAlert) {
+            Button("OK") {}
         }
     }
 
@@ -106,9 +110,12 @@ struct ContentView: View {
         let panel = NSOpenPanel()
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
+        // フィルタなし - テキストとして読めなければアラート表示
         if panel.runModal() == .OK, let url = panel.url {
             if let content = try? String(contentsOf: url, encoding: .utf8) {
                 if side == .left { leftText = content } else { rightText = content }
+            } else {
+                showingAlert = true
             }
         }
     }
@@ -117,10 +124,15 @@ struct ContentView: View {
         guard let provider = providers.first else { return }
         provider.loadItem(forTypeIdentifier: "public.file-url", options: nil) { item, _ in
             guard let data = item as? Data,
-                  let url = URL(dataRepresentation: data, relativeTo: nil),
-                  let content = try? String(contentsOf: url, encoding: .utf8) else { return }
-            DispatchQueue.main.async {
-                if side == .left { leftText = content } else { rightText = content }
+                  let url = URL(dataRepresentation: data, relativeTo: nil) else { return }
+            if let content = try? String(contentsOf: url, encoding: .utf8) {
+                DispatchQueue.main.async {
+                    if side == .left { leftText = content } else { rightText = content }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    showingAlert = true
+                }
             }
         }
     }

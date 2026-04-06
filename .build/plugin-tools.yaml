@@ -3,74 +3,59 @@ client:
   file-system: device-agnostic
 tools: {}
 targets:
-  "DiffBuddy-arm64-apple-macosx26.0-debug.exe": ["<DiffBuddy-arm64-apple-macosx26.0-debug.exe>"]
-  "DiffBuddy-arm64-apple-macosx26.0-debug.module": ["<DiffBuddy-arm64-apple-macosx26.0-debug.module>"]
+  "DiffBuddy-arm64-apple-macosx26.0-release.exe": ["<DiffBuddy-arm64-apple-macosx26.0-release.exe>"]
+  "DiffBuddy-arm64-apple-macosx26.0-release.module": ["<DiffBuddy-arm64-apple-macosx26.0-release.module>"]
   "PackageStructure": ["<PackageStructure>"]
-  "main": ["<DiffBuddy-arm64-apple-macosx26.0-debug.exe>","<DiffBuddy-arm64-apple-macosx26.0-debug.module>"]
-  "test": ["<DiffBuddy-arm64-apple-macosx26.0-debug.exe>","<DiffBuddy-arm64-apple-macosx26.0-debug.module>"]
+  "main": ["<DiffBuddy-arm64-apple-macosx26.0-release.exe>","<DiffBuddy-arm64-apple-macosx26.0-release.module>"]
+  "test": ["<DiffBuddy-arm64-apple-macosx26.0-release.exe>","<DiffBuddy-arm64-apple-macosx26.0-release.module>"]
 default: "main"
 nodes:
   "/Users/karimata/Desktop/DiffBuddy/Sources/":
     is-directory-structure: true
     content-exclusion-patterns: [".git",".build"]
-  "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy":
-    is-mutated: true
 commands:
-  "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy-entitlement.plist":
+  "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/sources":
     tool: write-auxiliary-file
-    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
-    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy-entitlement.plist"]
-    description: "Write auxiliary file /Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy-entitlement.plist"
+    inputs: ["<sources-file-list>","/Users/karimata/Desktop/DiffBuddy/Sources/ContentView.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffBuddyApp.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffEngine.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffLineView.swift","/Users/karimata/Desktop/DiffBuddy/Sources/LineNumberTextEditor.swift","/Users/karimata/Desktop/DiffBuddy/Sources/SyncedDiffView.swift"]
+    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/sources"]
+    description: "Write auxiliary file /Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/sources"
 
-  "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/sources":
+  "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.product/Objects.LinkFileList":
     tool: write-auxiliary-file
-    inputs: ["<sources-file-list>","/Users/karimata/Desktop/DiffBuddy/Sources/ContentView.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffBuddyApp.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffEngine.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffLineView.swift"]
-    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/sources"]
-    description: "Write auxiliary file /Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/sources"
+    inputs: ["<link-file-list>","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/ContentView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffBuddyApp.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffEngine.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffLineView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/LineNumberTextEditor.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/SyncedDiffView.swift.o"]
+    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.product/Objects.LinkFileList"
 
-  "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.product/Objects.LinkFileList":
-    tool: write-auxiliary-file
-    inputs: ["<link-file-list>","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.swift.o"]
-    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.product/Objects.LinkFileList"]
-    description: "Write auxiliary file /Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.product/Objects.LinkFileList"
-
-  "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/swift-version--FE76C4972A19952.txt":
+  "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/swift-version--FE76C4972A19952.txt":
     tool: write-auxiliary-file
     inputs: ["<swift-get-version>","/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
-    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/swift-version--FE76C4972A19952.txt"]
+    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/swift-version--FE76C4972A19952.txt"]
     always-out-of-date: "true"
-    description: "Write auxiliary file /Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/swift-version--FE76C4972A19952.txt"
+    description: "Write auxiliary file /Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/swift-version--FE76C4972A19952.txt"
 
-  "<DiffBuddy-arm64-apple-macosx26.0-debug.exe>":
+  "<DiffBuddy-arm64-apple-macosx26.0-release.exe>":
     tool: phony
-    inputs: ["<DiffBuddy-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
-    outputs: ["<DiffBuddy-arm64-apple-macosx26.0-debug.exe>"]
+    inputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy"]
+    outputs: ["<DiffBuddy-arm64-apple-macosx26.0-release.exe>"]
 
-  "<DiffBuddy-arm64-apple-macosx26.0-debug.module>":
+  "<DiffBuddy-arm64-apple-macosx26.0-release.module>":
     tool: phony
-    inputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/Modules/DiffBuddy.swiftmodule"]
-    outputs: ["<DiffBuddy-arm64-apple-macosx26.0-debug.module>"]
+    inputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/ContentView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffBuddyApp.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffEngine.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffLineView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/LineNumberTextEditor.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/SyncedDiffView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/Modules/DiffBuddy.swiftmodule"]
+    outputs: ["<DiffBuddy-arm64-apple-macosx26.0-release.module>"]
 
-  "C.DiffBuddy-arm64-apple-macosx26.0-debug.exe":
+  "C.DiffBuddy-arm64-apple-macosx26.0-release.exe":
     tool: shell
-    inputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.product/Objects.LinkFileList"]
-    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy"]
-    description: "Linking ./.build/arm64-apple-macosx/debug/DiffBuddy"
-    args: ["/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug","-o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy","-module-name","DiffBuddy","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_DiffBuddy_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/Modules/DiffBuddy.swiftmodule","-plugin-path","/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+    inputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/ContentView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffBuddyApp.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffEngine.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffLineView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/LineNumberTextEditor.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/SyncedDiffView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.product/Objects.LinkFileList"]
+    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy"]
+    description: "Linking ./.build/arm64-apple-macosx/release/DiffBuddy"
+    args: ["/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release","-o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy","-module-name","DiffBuddy","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-dead_strip","-Xlinker","-alias","-Xlinker","_DiffBuddy_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-plugin-path","/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
 
-  "C.DiffBuddy-arm64-apple-macosx26.0-debug.exe-entitlements":
+  "C.DiffBuddy-arm64-apple-macosx26.0-release.module":
     tool: shell
-    inputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy-entitlement.plist"]
-    outputs: ["<DiffBuddy-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
-    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/DiffBuddy"
-    args: ["codesign","--force","--sign","-","--entitlements","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy-entitlement.plist","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy"]
-
-  "C.DiffBuddy-arm64-apple-macosx26.0-debug.module":
-    tool: shell
-    inputs: ["/Users/karimata/Desktop/DiffBuddy/Sources/ContentView.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffBuddyApp.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffEngine.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffLineView.swift","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/swift-version--FE76C4972A19952.txt","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/sources"]
-    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/Modules/DiffBuddy.swiftmodule"]
-    description: "Compiling Swift Module 'DiffBuddy' (4 sources)"
-    args: ["/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","DiffBuddy","-emit-dependencies","-emit-module","-emit-module-path","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/Modules/DiffBuddy.swiftmodule","-output-file-map","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/output-file-map.json","-incremental","-c","@/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/sources","-I","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","DiffBuddy_main","-swift-version","5","-plugin-path","/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","diffbuddy"]
+    inputs: ["/Users/karimata/Desktop/DiffBuddy/Sources/ContentView.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffBuddyApp.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffEngine.swift","/Users/karimata/Desktop/DiffBuddy/Sources/DiffLineView.swift","/Users/karimata/Desktop/DiffBuddy/Sources/LineNumberTextEditor.swift","/Users/karimata/Desktop/DiffBuddy/Sources/SyncedDiffView.swift","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/swift-version--FE76C4972A19952.txt","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/sources"]
+    outputs: ["/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/ContentView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffBuddyApp.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffEngine.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/DiffLineView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/LineNumberTextEditor.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/SyncedDiffView.swift.o","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/Modules/DiffBuddy.swiftmodule"]
+    description: "Compiling Swift Module 'DiffBuddy' (6 sources)"
+    args: ["/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","DiffBuddy","-emit-dependencies","-emit-module","-emit-module-path","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/Modules/DiffBuddy.swiftmodule","-output-file-map","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/output-file-map.json","-whole-module-optimization","-num-threads","10","-c","@/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/DiffBuddy.build/sources","-I","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/Modules","-target","arm64-apple-macosx14.0","-whole-module-optimization","-num-threads","10","-serialize-diagnostics","-O","-j10","-DSWIFT_PACKAGE","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/release/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","DiffBuddy_main","-swift-version","5","-plugin-path","/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","diffbuddy"]
 
   "PackageStructure":
     tool: package-structure-tool
