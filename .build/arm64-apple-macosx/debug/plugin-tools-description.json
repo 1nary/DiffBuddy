@@ -1,0 +1,320 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.DiffBuddy-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/sources",
+      "importPath" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/Sources/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/Sources/DiffBuddyApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/Sources/DiffEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/Sources/DiffLineView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/swift-version--FE76C4972A19952.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "DiffBuddy",
+      "moduleOutputPath" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/Modules/DiffBuddy.swiftmodule",
+      "objects" : [
+        "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.swift.o",
+        "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.swift.o",
+        "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.swift.o",
+        "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "DiffBuddy_main",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "diffbuddy"
+      ],
+      "outputFileMapPath" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/Modules/DiffBuddy.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/karimata/Desktop/DiffBuddy/Sources/ContentView.swift",
+        "/Users/karimata/Desktop/DiffBuddy/Sources/DiffBuddyApp.swift",
+        "/Users/karimata/Desktop/DiffBuddy/Sources/DiffEngine.swift",
+        "/Users/karimata/Desktop/DiffBuddy/Sources/DiffLineView.swift"
+      ],
+      "tempsPath" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "DiffBuddy" : [
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "DiffBuddy",
+      "-package-name",
+      "diffbuddy",
+      "-c",
+      "/Users/karimata/Desktop/DiffBuddy/Sources/ContentView.swift",
+      "/Users/karimata/Desktop/DiffBuddy/Sources/DiffBuddyApp.swift",
+      "/Users/karimata/Desktop/DiffBuddy/Sources/DiffEngine.swift",
+      "/Users/karimata/Desktop/DiffBuddy/Sources/DiffLineView.swift",
+      "-I",
+      "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "DiffBuddy_main",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "diffbuddy",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "DiffBuddy" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy-entitlement.plist"
+    },
+    "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/Sources/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/Sources/DiffBuddyApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/Sources/DiffEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/Sources/DiffLineView.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/sources"
+    },
+    "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.product/Objects.LinkFileList"
+    },
+    "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/swift-version--FE76C4972A19952.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode-26.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/swift-version--FE76C4972A19952.txt"
+    }
+  }
+}

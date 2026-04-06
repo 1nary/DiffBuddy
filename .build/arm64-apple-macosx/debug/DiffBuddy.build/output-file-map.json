@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/master.swiftdeps"
+  },
+  "/Users/karimata/Desktop/DiffBuddy/Sources/ContentView.swift": {
+    "dependencies": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.d",
+    "object": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.swift.o",
+    "swiftmodule": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/ContentView.dia"
+  },
+  "/Users/karimata/Desktop/DiffBuddy/Sources/DiffBuddyApp.swift": {
+    "dependencies": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.d",
+    "object": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.swift.o",
+    "swiftmodule": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.swiftdeps",
+    "diagnostics": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffBuddyApp.dia"
+  },
+  "/Users/karimata/Desktop/DiffBuddy/Sources/DiffEngine.swift": {
+    "dependencies": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.d",
+    "object": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.swift.o",
+    "swiftmodule": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.swiftdeps",
+    "diagnostics": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffEngine.dia"
+  },
+  "/Users/karimata/Desktop/DiffBuddy/Sources/DiffLineView.swift": {
+    "dependencies": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.d",
+    "object": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.swift.o",
+    "swiftmodule": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView~partial.swiftmodule",
+    "swift-dependencies": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.swiftdeps",
+    "diagnostics": "/Users/karimata/Desktop/DiffBuddy/.build/arm64-apple-macosx/debug/DiffBuddy.build/DiffLineView.dia"
+  }
+}
