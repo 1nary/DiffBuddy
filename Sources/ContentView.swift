@@ -82,12 +82,8 @@ struct ContentView: View {
                 .padding(.top, 8)
 
             ZStack {
-                TextEditor(text: text)
-                    .font(.system(.body, design: .monospaced))
-                    .scrollContentBackground(.hidden)
-                    .padding(8)
+                LineNumberTextEditor(text: text)
 
-                // Placeholder
                 if text.wrappedValue.isEmpty {
                     VStack(spacing: 8) {
                         Image(systemName: "doc.on.clipboard")
@@ -132,24 +128,6 @@ struct ContentView: View {
     // MARK: - Diff View
 
     private func diffView(result: DiffResult) -> some View {
-        HSplitView {
-            ScrollView {
-                LazyVStack(spacing: 0) {
-                    ForEach(result.left) { line in
-                        DiffLineView(line: line)
-                    }
-                }
-                .padding(.vertical, 4)
-            }
-
-            ScrollView {
-                LazyVStack(spacing: 0) {
-                    ForEach(result.right) { line in
-                        DiffLineView(line: line)
-                    }
-                }
-                .padding(.vertical, 4)
-            }
-        }
+        SyncedDiffView(result: result)
     }
 }
