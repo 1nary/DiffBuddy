@@ -1,2 +1,7 @@
 .build/
 .swiftpm/
+build/
+DerivedData/
+DiffBuddy.xcodeproj/
+secrets/
+.DS_Store

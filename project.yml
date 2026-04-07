@@ -1,0 +1,50 @@
+name: DiffBuddy
+options:
+  bundleIdPrefix: app.diffbuddy
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+  developmentLanguage: en
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: H854PP94F8
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ENABLE_HARDENED_RUNTIME: YES
+    GENERATE_INFOPLIST_FILE: NO
+
+targets:
+  DiffBuddy:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Sources
+      - path: DiffBuddy/Assets.xcassets
+    info:
+      path: DiffBuddy/Info.plist
+      properties:
+        CFBundleName: DiffBuddy
+        CFBundleDisplayName: DiffBuddy
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleExecutable: $(EXECUTABLE_NAME)
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundlePackageType: APPL
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSHumanReadableCopyright: "Copyright © 2026 naritoshi karimata. All rights reserved."
+        NSHighResolutionCapable: true
+        LSApplicationCategoryType: public.app-category.developer-tools
+    entitlements:
+      path: DiffBuddy/DiffBuddy.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.files.user-selected.read-write: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.diffbuddy
+        PRODUCT_NAME: DiffBuddy
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
